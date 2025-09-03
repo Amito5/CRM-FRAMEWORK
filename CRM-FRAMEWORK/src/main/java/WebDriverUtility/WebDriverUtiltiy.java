@@ -33,8 +33,42 @@ public class WebDriverUtiltiy {
 	 */
 	
 	public void fullscreenWindow() {
-		driver.manage().window().fullscreen();
+		driver.manage().window().fullscreen();	
+	}
+	
+	/**
+	 * Accepts alert popup.
+	 */
+	public void acceptAlert() {
+		driver.switchTo().alert().accept();
+	}
+
+	/**
+	 * Dismisses alert popup.
+	 */
+	public void dismissAlert() {
+		driver.switchTo().alert().dismiss();
+	}
+
+	/**
+	 * Returns alert text.
+	 * 
+	 * @return Alert text
+	 */
+	public String getAlertText() {
+		return driver.switchTo().alert().getText();
+	}
+
+	/**
+	 * Sends text to alert prompt.
+	 * 
+	 * @param text Text to send
+	 */
+	public void sendTextToAlert(String text) {
+		driver.switchTo().alert().sendKeys(text);
+	}
+
 		
 	}
 
-}
+
