@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!-- 
+1. Name => parallel.xml
+2. parallel="tests"
+3. no. of class = no. of <test>
+4. Names of test tag should be different
+ -->
+ 
+<suite parallel="tests" name="Suite">
+  <test parallel="tests" name="Test2">
+    <classes>
+      <class name="typeofExecution.D3t"/>
+      </classes>
+      </test>
+      
+      <test  parallel="tests" name="Test1">
+    <classes>
+      <class name="typeofExecution.D2t"/>
+      </classes>
+      </test>
+      
+        <test  parallel="tests" name="Test3">
+    <classes>
+      <class name="typeofExecution.D1t"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
