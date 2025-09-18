@@ -9,13 +9,44 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">101</td><td>reg</td><td></td></tr>
+<tr><td><a href="#t0">Test2</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">8,754</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Test1</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">13,457</td><td></td><td></td></tr>
+<tr><td><a href="#t2">Test3</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">17,588</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">2</th><th class="num">0</th><th class="num">0</th><th class="num attn">1</th><th class="num">39,799</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">typeofExecution.D4t</td><td><a href="#m0">case5</a></td><td rowspan="1">1757999465208</td><td rowspan="1">2</td></tr><tr class="passedeven"><td><a href="#m1">case6</a></td><td rowspan="1">1757999465212</td><td rowspan="1">3</td></tr><tr class="passedodd"><td rowspan="2">typeofExecution.D5t</td><td><a href="#m2">case7</a></td><td rowspan="1">1757999465181</td><td rowspan="1">13</td></tr><tr class="passedodd"><td><a href="#m3">case8</a></td><td rowspan="1">1757999465202</td><td rowspan="1">2</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test2 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">CRB.crossbro</td><td><a href="#m0">case1</a></td><td rowspan="1">1758100387334</td><td rowspan="1">8654</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Test1 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">CRB.crossbro</td><td><a href="#m1">case1</a></td><td rowspan="1">1758100387334</td><td rowspan="1">13372</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">Test3 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">CRB.crossbro</td><td><a href="#m2">case1</a></td><td rowspan="1">1758100387334</td><td rowspan="1">17507</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">typeofExecution.D4t#case5</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">typeofExecution.D4t#case6</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">typeofExecution.D5t#case7</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">typeofExecution.D5t#case8</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test2</h2><h3 id="m0">CRB.crossbro#case1</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>edge</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: msedgedriver, error Command failed with code: 65, executed: [--browser, MicrosoftEdge, --language-binding, java, --output, json]
+error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_140_WINDOWS)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: driver.version: EdgeDriver
+	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:124)
+	at org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+	at org.openqa.selenium.edge.EdgeDriver.generateExecutor(EdgeDriver.java:71)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:60)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:56)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:48)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:44)
+	at CRB.crossbro.case1(crossbro.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: org.openqa.selenium.WebDriverException: Command failed with code: 65, executed: [--browser, MicrosoftEdge, --language-binding, java, --output, json]
+error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_140_WINDOWS)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: driver.version: EdgeDriver
+	at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:173)
+	at org.openqa.selenium.manager.SeleniumManager.getBinaryPaths(SeleniumManager.java:254)
+	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:104)
+	... 27 more
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test1</h2><h3 id="m1">CRB.crossbro#case1</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>chrome</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test3</h2><h3 id="m2">CRB.crossbro#case1</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>firefox</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

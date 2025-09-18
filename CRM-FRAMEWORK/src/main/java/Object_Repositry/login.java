@@ -31,6 +31,13 @@ public class login {
 		 return logbtn;
 	 }
 	 
+	 public void loginToCRM(String username, String password) {
+			getUsername().sendKeys(username);
+			getPwd().sendKeys(password);
+			getLogbtn().click();
+		}
+
+	 
 	 
 	 
 

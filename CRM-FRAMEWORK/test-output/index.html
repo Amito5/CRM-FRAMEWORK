@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,17 +50,17 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\Amit ji\git\CRM\CRM-FRAMEWORK\group.xml</span>
+                    <span>C:\Users\Amit ji\git\CRM\CRM-FRAMEWORK\cb.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Suite" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">3 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="group-Suite" class="navigator-link ">
-                    <span>2 groups</span>
+                    <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="CRB.crossbro" class="method navigator-link" hash-for-method="case1(edge)">case1(edge)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,22 +117,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="typeofExecution.D4t" class="method navigator-link" hash-for-method="case5">case5</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="CRB.crossbro" class="method navigator-link" hash-for-method="case1(chrome)">case1(chrome)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="typeofExecution.D4t" class="method navigator-link" hash-for-method="case6">case6</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="typeofExecution.D5t" class="method navigator-link" hash-for-method="case7">case7</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="typeofExecution.D5t" class="method navigator-link" hash-for-method="case8">case8</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="CRB.crossbro" class="method navigator-link" hash-for-method="case1(firefox)">case1(firefox)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -133,46 +137,71 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">typeofExecution.D5t</span>
+              <img src="failed.png"/>
+              <span class="class-name">CRB.crossbro</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="case7">
-                  </a> <!-- case7 -->
-                  <span class="method-name">case7</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="case8">
-                  </a> <!-- case8 -->
-                  <span class="method-name">case8</span>
+                  <a name="case1(edge)">
+                  </a> <!-- case1(edge) -->
+                  <span class="method-name">case1</span>
+                  <span class="parameters">(edge)</span>
+                  <div class="stack-trace">org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: msedgedriver, error Command failed with code: 65, executed: [--browser, MicrosoftEdge, --language-binding, java, --output, json]
+error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_140_WINDOWS)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: driver.version: EdgeDriver
+	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:124)
+	at org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+	at org.openqa.selenium.edge.EdgeDriver.generateExecutor(EdgeDriver.java:71)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:60)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:56)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:48)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:44)
+	at CRB.crossbro.case1(crossbro.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: org.openqa.selenium.WebDriverException: Command failed with code: 65, executed: [--browser, MicrosoftEdge, --language-binding, java, --output, json]
+error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_140_WINDOWS)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: driver.version: EdgeDriver
+	at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:173)
+	at org.openqa.selenium.manager.SeleniumManager.getBinaryPaths(SeleniumManager.java:254)
+	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:104)
+	... 27 more
+... Removed 15 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">typeofExecution.D4t</span>
+              <span class="class-name">CRB.crossbro</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="case5">
-                  </a> <!-- case5 -->
-                  <span class="method-name">case5</span>
+                  <a name="case1(chrome)">
+                  </a> <!-- case1(chrome) -->
+                  <span class="method-name">case1</span>
+                  <span class="parameters">(chrome)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="case6">
-                  </a> <!-- case6 -->
-                  <span class="method-name">case6</span>
+                  <a name="case1(firefox)">
+                  </a> <!-- case1(firefox) -->
+                  <span class="method-name">case1</span>
+                  <span class="parameters">(firefox)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -180,29 +209,31 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Amit ji\git\CRM\CRM-FRAMEWORK\group.xml</span>
+            <span class="header-content">C:\Users\Amit ji\git\CRM\CRM-FRAMEWORK\cb.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;groups&gt;
-    &lt;run&gt;
-      &lt;include name=&quot;reg&quot;/&gt;
-    &lt;/run&gt;
-  &lt;/groups&gt;
-  &lt;groups&gt;
-    &lt;run&gt;
-      &lt;include name=&quot;reg&quot;/&gt;
-    &lt;/run&gt;
-  &lt;/groups&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+&lt;suite parallel=&quot;tests&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Test1&quot;&gt;
+    &lt;parameter name=&quot;bro&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;typeofExecution.D5t&quot;/&gt;
-      &lt;class name=&quot;typeofExecution.D4t&quot;/&gt;
+      &lt;class name=&quot;CRB.crossbro&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
+  &lt;/test&gt; &lt;!-- Test1 --&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Test2&quot;&gt;
+    &lt;parameter name=&quot;bro&quot; value=&quot;edge&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;CRB.crossbro&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test2 --&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Test3&quot;&gt;
+    &lt;parameter name=&quot;bro&quot; value=&quot;firefox&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;CRB.crossbro&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test3 --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -214,7 +245,13 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (2 classes)</span>
+                <span class="test-name">Test1 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Test2 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Test3 (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -224,34 +261,6 @@
             <span class="header-content">Groups for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="test-group">
-              <span class="test-group-name">reg</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">case5</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">case6</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">case7</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">case8</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
-            <div class="test-group">
-              <span class="test-group-name">smoke</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">case8</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Suite" class="panel">
@@ -268,28 +277,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'case7')
-data.setCell(0, 2, 'typeofExecution.D5t')
-data.setCell(0, 3, 13);
+data.setCell(0, 1, 'case1')
+data.setCell(0, 2, 'CRB.crossbro')
+data.setCell(0, 3, 17507);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'case6')
-data.setCell(1, 2, 'typeofExecution.D4t')
-data.setCell(1, 3, 3);
+data.setCell(1, 1, 'case1')
+data.setCell(1, 2, 'CRB.crossbro')
+data.setCell(1, 3, 13372);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'case5')
-data.setCell(2, 2, 'typeofExecution.D4t')
-data.setCell(2, 3, 2);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'case8')
-data.setCell(3, 2, 'typeofExecution.D5t')
-data.setCell(3, 3, 2);
+data.setCell(2, 1, 'case1')
+data.setCell(2, 2, 'CRB.crossbro')
+data.setCell(2, 3, 8654);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 20 ms</span>
+              <span class="suite-total-time">Total running time: 17 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -304,23 +309,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">typeofExecution.D5t</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">case9</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">typeofExecution.D4t</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">case4</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -329,25 +320,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">typeofExecution.D5t</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">CRB.crossbro</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">case7</span>
+                <span class="method-name">case1(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">case8</span>
-                <span class="method-start">21 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">typeofExecution.D4t</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">case5</span>
-                <span class="method-start">27 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">case1(edge)</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">case6</span>
-                <span class="method-start">31 ms</span>
+                <span class="method-name">case1(firefox)</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
